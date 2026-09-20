@@ -44,13 +44,9 @@ header{
     color: rgb(78, 5, 5);
 }
 
-.location-icon{
-    /* display: flex; */
+.location-icon{ 
     height: 50px;
     width: 100%;
-    /* align-items: center;
-    justify-content: space-between; */
-    /* margin-right: 80px; */
 }
 
 .location-icon p{
@@ -77,21 +73,29 @@ nav ul{
     justify-content: space-evenly;
 }
 
+
 .cart{
     margin-right: 0;
     text-align: right;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
 }
 
-.cart img{
-    width: min(25px, 50%);
-    margin-bottom: 12%;
-    justify-content: space-around;
+.shopping-cart{
+    width: min(50px, 50%);
+    color: rgb(78, 5, 5);
+    cursor: pointer;
+    /* margin-bottom: 20%; */
 }
 
 .hamburger-menu{
     width: min(50px, 50%);
     color: rgb(78, 5, 5);
-    margin-bottom: 5%;
+    margin-top: -5%;
+    cursor: pointer;
     display: none !important;
 }
 
@@ -199,7 +203,7 @@ button{
 }
 
 
-#menu{
+#menu-section{
     background-color: white;
     color: rgb(78, 5, 5);
     text-align: center;
@@ -431,20 +435,19 @@ footer img{
 
 
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1324px){
     .container{
    display: flex;
    align-items: center;
     }
 
     nav{
-    margin-right: -20%;
-    margin-bottom: -20%;
+   margin: 0 auto;
     }
 
-    .cart img{
-        margin-right: 60%;
-    } 
+    nav ul{
+        gap: 15px
+    }
     
     .earn-loyalty-points{
         width: 70%;
@@ -469,10 +472,10 @@ footer img{
 
     .image{
         width: 85%;
-        margin-right: 0;
+        margin-right: -100%;
     }
 
-    #menu{
+    #menu-section{
         max-width: 100%;
         max-width: 100%;
         display: flex;
@@ -546,19 +549,38 @@ footer img{
     }
 
     nav{
-   display: none;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 30%;
+    width: 150px;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
     }
 
-    .cart img{
-        margin-bottom: -6%;
-        margin-right: 50%;
+    nav.show{
+        display: block;
     }
-    
+
+    nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
     .hamburger-menu{
         display: block!important;
-        margin-bottom: 30%;
-        margin-left: 50%;
-    }
+        }
+
+    .cart{
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
     
     .earn-loyalty-points{
         width: 70%;
@@ -628,6 +650,10 @@ footer img{
 
      footer span{
         float: left;
+     }
+
+     footer img{
+        width: 8.5%;
      }
 
      footer button{
