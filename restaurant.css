@@ -13,6 +13,65 @@
     align-items: center;
 }
 
+.modal{
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-container{
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    color: rgb(78, 5, 5);
+    background-color: white;
+
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.45)), url(foodtable.jpeg);
+    background-size: cover;
+    border-radius: 15px;
+    padding: 40px;
+    color: white;
+}
+
+.modal h1, p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.modal h1{
+    font-size: 50px;
+}
+
+.modal span{
+    font-size: 70px;
+    color: yellow;
+}
+
+.modal p{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.modal-container img{
+    width: 50%;
+}
+
+.modal-container button{
+    margin: 15px auto;
+}
+
+.modal{
+    display: none;
+}
+
+.modal.display{
+    display: flex;
+}
+
 header{
     position: fixed;
     height: 15vh;
@@ -441,6 +500,14 @@ footer img{
    align-items: center;
     }
 
+    .modal{
+        margin: auto;
+        width: 80%;
+        height: 50%;
+        justify-content: center;
+        align-content: center;
+    }
+
     nav{
    margin: 0 auto;
     }
@@ -547,6 +614,15 @@ footer img{
    display: flex;
    align-items: center;
     }
+
+    .modal{
+        margin: auto;
+        width: 50%;
+        height: 60%;
+        justify-content: center;
+        align-content: center;
+    }
+
 
     nav{
     display: none;
